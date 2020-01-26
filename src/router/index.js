@@ -10,16 +10,16 @@ const routes = [
     name: 'home',
     component: Home
   },
-  {
+  // {
     // path: '/search',
     // name: 'search',
     // component: BookSearch
-  },
-  {
-    // path: '/form',
-    // name: 'form',
-    // component: BookForm
-  },
+  // },
+  // {
+  //   path: '/form',
+  //   name: 'form',
+  //   component: BookForm
+  // },
   {
     path: '/about',
     name: 'about',
