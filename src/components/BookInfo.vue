@@ -14,8 +14,8 @@
 </template>
 
 <script>
-import { mapAciton } from 'vuex'
-import { UPDATE_CURRENT } from '@/mutation-types'
+import { mapActions } from 'vuex'
+import { UPDATE_CURRENT } from '@/store/mutation_types'
 
 export default {
   name: 'book-info',
@@ -25,7 +25,7 @@ export default {
     book: { type: Object },
   },
   methods: {
-    ...mapAciton([UPDATE_CURRENT]), // UPDATE_CURRENTを同名メソッドに紐付ける
+    ...mapActions([UPDATE_CURRENT]), // UPDATE_CURRENTを同名メソッドに紐付ける
     onclick() {
       if (this.linkable) {
         this[UPDATE_CURRENT](this.book)
