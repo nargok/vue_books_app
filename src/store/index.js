@@ -26,7 +26,7 @@ export default new Vuex.Store({
     },
     getBookById(state) {
       return id => {
-        return state.books.filter(book => book.id === id)
+        return state.books.find(book => book.id === id)
       }
     },
     current(state) {
@@ -34,15 +34,16 @@ export default new Vuex.Store({
     },
   },
   mutations: {
-    // この辺は途中
     [UPDATE_CURRENT](state, payload) {
       state.current = payload
     },
     [UPDATE_BOOK](state, payload) {
       let b = this.getters.getBookById(payload.id)
       if (b) {
+        // 既存のレビューを更新する
         Object.assign(b, payload)
       } else {
+        // 新規登録
         state.books.push(payload)
       }
     },
