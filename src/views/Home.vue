@@ -20,7 +20,7 @@ export default {
   name: 'home',
   data() {
     return {
-      boks: [],
+      books: [],
     }
   },
   components: {
@@ -33,7 +33,7 @@ export default {
     }
   },
   mounted() {
-    this.book = this.getRangeByPage(1)
+    this.books = this.getRangeByPage(1)
   }
 }
 </script>
